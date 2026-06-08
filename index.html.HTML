@@ -32,12 +32,19 @@ function doGet(e) {
     ]);
 
     // Redirigir a la página educativa después de registrar
-    const paginaEducativa = "https://egondrez-dev.github.io/campana-seguridad/index.html";
+    const paginaEducativa = "https://egondrez-dev.github.io/campana-seguridad/";
 
-   return HtmlService.createHtmlOutput(`
-  <script>
-    window.top.location.href = "${paginaEducativa}";
-  </script>
+return HtmlService.createHtmlOutput(`
+<html>
+  <head>
+    <script>
+      window.top.location.href = "${paginaEducativa}";
+    </script>
+  </head>
+  <body>
+    Redirigiendo...
+  </body>
+</html>
 `);
 
   } catch (err) {
